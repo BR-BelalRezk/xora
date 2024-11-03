@@ -39,16 +39,17 @@ export default function FAQ({ item, index }: Props) {
           <div className="g4 size-11/12 rounded-full shadow-300" />
         </div>
       </div>
-      <div
-        className={clsx(
-          "transition-[height] duration-500",
-          activeID === item.id ? "h-auto" : "h-0"
-        )}
-      >
-        {activeID === item.id && (
-          <div className="body-3 px-7 py-3.5">{item.answer}</div>
-        )}
-      </div>
+
+      {activeID === item.id && (
+        <div
+          className={clsx(
+            "body-3 px-7 py-3.5 transition-all duration-500",
+            activeID === item.id ? "h-auto" : "h-0"
+          )}
+        >
+          {item.answer}
+        </div>
+      )}
       <div
         className={clsx(
           "g5 -bottom-7 -top-7 absolute left-0 right-0 -z-1 rounded-3xl opacity-0 transition-opacity duration-500",
