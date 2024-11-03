@@ -6,7 +6,6 @@ import { Element } from "react-scroll";
 import PricingFilters from "../ui/PricingFilters";
 import PricingFiltersBGImage from "../ui/PricingFiltersBGImage";
 import { plans } from "@/constants";
-import Image from "next/image";
 import Plan from "../shared/Plan";
 
 export default function Pricing() {
@@ -32,7 +31,7 @@ export default function Pricing() {
           </div>
           <div className="scroll-hide relative z-2 -mt-12 flex  justify-center flex-wrap lg:flex-nowrap items-start max-xl:gap-5  max-xl:pt-6">
             {plans.map((item, index) => (
-              <Plan index={index} item={item} month={month} />
+              <Plan key={item.id} index={index} item={item} month={month} />
             ))}
           </div>
         </div>
