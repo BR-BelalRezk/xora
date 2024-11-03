@@ -41,7 +41,7 @@ export default function FAQ({ item, index }: Props) {
       </div>
       <div
         className={clsx(
-          "transition-all duration-500",
+          "transition-[height] duration-500",
           activeID === item.id ? "h-auto" : "h-0"
         )}
       >
